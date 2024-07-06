@@ -17,10 +17,8 @@
 package tacos.demos.web;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author <a href="mailto:chenxilzx1@gmail.com">theonefx</a>
@@ -53,9 +51,10 @@ public class BasicController {
     }
 
     // http://127.0.0.1:8080/html
-    @RequestMapping("/html")
-    public String html() {
-        return "index.html";
+    @GetMapping("/")
+    public String html(Model model) {
+        model.addAttribute("text", "msg from controller.");
+        return "index";
     }
 
     @ModelAttribute

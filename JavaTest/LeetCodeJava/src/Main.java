@@ -1,5 +1,4 @@
-import xyz.barry.leetcode.Hot7_215;
-import xyz.barry.leetcode.ListNode;
+import xyz.barry.leetcode.*;
 
 import java.util.List;
 
@@ -7,9 +6,16 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Hot7_215 hot7215 = new Hot7_215();
-        int res = hot7215.findKthLargest(new int[]{3,2,3,1,2,4,5,5,6}, 4);
 
-        System.out.println(res);
+        Hot11_200 hot11200 = new Hot11_200();
+        char[][] cs = {{'1','1','1','1','0'},
+                {'1','1','0','1','0'},
+                {'1','1','0','0','0'},
+                {'0','0','0','0','0'}};
+
+        int num = hot11200.numIslands(cs);
+
+
+        System.out.println(num);
     }
 }
